@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding : 0;
+
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.ticboard {
+    border : 3px solid blue;
+    width : min(99vw,99vh);
+    height : min(99vw,99vh);
+
+}
