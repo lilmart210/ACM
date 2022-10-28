@@ -13,7 +13,7 @@ const playerone = 1;
 const playertwo = 2;
 let current = 1;
 let isWon = false;
-const maxDepth = 5
+const maxDepth = 10
 //the algorithm is exas | player 2
 
 //fill the board with state zero
@@ -138,7 +138,7 @@ function goplay(e){
 }
 //the ai turn
 function aiTurn(){
-    const bestmove = findMove(state,playertwo,playerone,playertwo,10);
+    const bestmove = findMove(state,playertwo,playerone,playertwo,maxDepth);
     console.log(bestmove);
     state[bestmove] = playertwo;
     isWon = calcwin(state,current);
@@ -168,11 +168,12 @@ function aiTurn(){
  * @param aturn -> the current persons turn
  * @param depth -> the tree depth limit
  * 
- * @returns -> A valid index in which the a.i can play
+ * @returns -> A valid index in which the ai can play
  * 
  * @constraint -> There will always be atleast 1 spot the player can use
  */
 function findMove(aState,robot,enemy,aturn,depth){
+
 
 }
 
