@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Hello There</h1>
+    <select id = 'select'>
+        <option default value = 'cat1.jpg'>cat1</option>
+        <option value = 'cat2.jpg'> cat2</option>
+        <option value = 'giant file.png'>giantfile</option>
+        <option value = 'rick.mp4' >rick roll</option>
+        <option value = 'whopper.mp4'>whopper</option>
+    </select>
+    <object  id = "display" data="video/cat1.jpg"></object>
+</body>
+
+    <script>
+        const sel = document.getElementById('select');
+        const disp = document.getElementById('display');
+
+        sel.addEventListener('change',(event)=>{
+
+            const val = event.target.value;
+
+            disp.data = `/video/${val}`;
+        })
+
+    </script>
+</html>
